@@ -1,180 +1,317 @@
+/* Estilos base - Mobile First */
 body {
     background: linear-gradient(to right, #feacd9, #f38eec);
-    margin: 0.5px;
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Barra de enlaces y opciones */
-.barraa {
-    width: 1810px;
-    height: 250px;
-    font-size: 24px;
-    background: linear-gradient(10deg, #18c991, #45e619);
-    margin: 0px 0px 0px 0px;
-    overflow: hidden;
-    border-radius: 0 0 80px 80px;
-}
-
-.barraa {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
-.barra {
+/* Barra de navegación */
+.barraa {
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    font-size: 16px;
+    background: linear-gradient(10deg, #18c991, #45e619);
+    border-radius: 0 0 30px 30px;
     display: flex;
-    flex-direction: row;
-    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
 }
 
 .barraa h1 {
     text-align: center;
     color: azure;
+    margin: 10px 0;
+    font-size: 1.8rem;
 }
 
-.barraa .lk {
-    margin: 50px 0px 0px 100px;
-    text-decoration: none;
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.barra .logo {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+    border-radius: 50%;
     transition: transform 0.4s ease;
 }
 
-.barraa .lk:hover {
-    transform: scale(1.2);
+.barra .lk {
+    margin: 8px 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.4s ease;
+    padding: 5px 10px;
 }
 
-.barraa #lpk {
-    margin: 10px 0px 0px 50px;
-    font-size: 60px;
-    color: white;
+.barra #lpk {
+    display: none; /* Ocultamos los separadores en móvil */
 }
 
 .barraa input {
-    width: 500px;
-    height: 20px;
-    margin: 10px 0px 0px 10px;
+    width: 90%;
+    max-width: 400px;
+    height: 35px;
+    margin: 10px auto;
     border-radius: 20px;
-    transition: transform 0.4s ease;
+    border: none;
+    padding: 0 15px;
+    font-size: 16px;
 }
 
+/* Efectos hover */
+.barraa .lk:hover,
+.logo:hover,
 .barraa input:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 40px;
-    margin: 0px 0px 0px 70px;
-    transition: transform 0.4s ease;
-}
-
-.logo:hover {
-    transform: scale(1.1);
-}
-
-/* galeria de flores*/
+/* Contenido principal */
 .galeria {
-    overflow: hidden;
+    padding: 20px;
 }
 
 .galeria .ncv {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 .galeria .ncv img {
-    width: 500px;
-    height: 500px;
-    margin: 30px 0px 50px 50px;
-    border-radius: 20px;
-}
-
-.galeria .ncv .ncvb {
-    margin: 30px 0px 0px 90px;
-    font-size: 20px;
-}
-
-.galeria .ncv .ncvb p {
-    margin: 0px 50px 0px 80px;
-    text-align: justify;
-}
-
-.gal {
-    text-align: center;
-    overflow: hidden;
-}
-
-.gal h3 a {
-    text-decoration: none;
-}
-
-.galeria .gal .lado {
-    margin: 0px 0px 0px 0px;
-    width: 500px;
-    height: 50px;
-}
-
-.galeria .ldi {
-    margin: 20px 0px 0px 20px;
-    border-radius: 15px;
-    transition: transform 0.4s ease;
-    height: 300px;
-    width: 400px;
-}
-
-.galeria .ldi:hover {
-    transform: scale(1.1);
-}
-
-.galeria .mjk img {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: auto;
-    border-radius: 20px;
-    margin: 0px 50px 0px 0px;
+    margin: 15px 0;
+    border-radius: 15px;
+}
+
+.galeria .ncvb {
+    margin: 15px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .galeria .mjk {
     display: flex;
-    text-align: justify;
-    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.galeria .mjk p {
-    margin: 0px 80px 0px 50px;
+.galeria .mjk img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 15px;
 }
 
-.galeria .mjk h1 {
-    margin: 0px 0px 0px 30px;
+/* Productos */
+.pre h1 {
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* Cpyryght*/
-.copy {
-    margin: 50px 0px 0px 0px;
-    background: linear-gradient(135deg, #19e8d0, #1b9ecdbb);
+.fichas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.ficha {
+    width: 90%;
+    max-width: 300px;
+    margin: 15px 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(255, 0, 72, 0.3);
     overflow: hidden;
-    border-radius: 90px 90px 0px 0px;
+    transition: transform 0.3s ease;
 }
 
-.copy #k {
+.ficha img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.ficha .infot {
+    padding: 15px;
     text-align: center;
 }
 
+/* Reseñas */
+.ty {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.reseña {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.reseñas {
+    width: 90%;
+    max-width: 400px;
+    margin: 15px 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(255, 0, 72, 0.3);
+}
+
+.reseñas .men {
+    padding: 15px;
+}
+
+.but {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estr {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Footer */
+.copy {
+    margin-top: 30px;
+    padding: 20px 10px;
+    background: linear-gradient(135deg, #19e8d0, #1b9ecdbb);
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+}
+
+.copy #k {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
 .copy .loli {
-    margin: 0px 0px 0px 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
 }
 
 .copy .logo {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.4s ease;
-    margin: 0px 0px 0px 0px;
-}
-
-.copy .logo:hover {
-    transform: scale(1.2);
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
 }
 
 .copy #direc {
-    margin: 0px 0px 20px 900px;
-    font-size: 25px;
+    margin: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media Queries para tablets */
+@media (min-width: 768px) {
+    .barraa {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+    
+    .barraa h1 {
+        font-size: 2.2rem;
+    }
+    
+    .barra {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .barra .lk {
+        margin: 0 15px;
+    }
+    
+    .fichas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .ficha {
+        margin: 15px;
+    }
+    
+    .reseña {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .reseñas {
+        margin: 15px;
+    }
+}
+
+/* Media Queries para escritorio */
+@media (min-width: 1024px) {
+    .barraa {
+        font-size: 20px;
+    }
+    
+    .barraa h1 {
+        font-size: 2.5rem;
+    }
+    
+    .barra .logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 30px 0 0;
+    }
+    
+    .barra #lpk {
+        display: block;
+        font-size: 2.5rem;
+        margin: 0 10px;
+    }
+    
+    .barra .lk {
+        margin: 0 20px;
+    }
+    
+    .galeria .ncv,
+    .galeria .mjk {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .galeria .ncvb,
+    .galeria .mjk div {
+        max-width: 50%;
+        margin: 0 20px;
+    }
+    
+    .copy #k {
+        font-size: 1.1rem;
+    }
+    
+    .copy .logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .copy #direc {
+        font-size: 1.2rem;
+    }
 }
